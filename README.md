@@ -63,7 +63,7 @@ This enables sales analysis by World Bank region and income level.
 | PySpark quality checks                       | `screenshots/02_notebook_data_quality_checks.png`              |
 | Notebook pipeline run                        | `screenshots/03_pipeline_notebook_run_succeeded.png`           |
 | API Dataflow output table                    | `screenshots/04_dataflow_api_country_reference_table.png`      |
-| Combined orchestration run                   | `screenshots/05_combined_pipeline_parallel_run.png`            |
+| Final sequential API-to-notebook pipeline run| `screenshots/07_sequential_pipeline_api_then_notebook.png` |
 | Country-to-sales semantic model relationship | `screenshots/06_semantic_model_country_sales_relationship.png` |
 
 
