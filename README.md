@@ -44,6 +44,29 @@ Direct Lake Semantic Model
       v
 Power BI Report
 ```
+## Multi-Source Integration
+
+This project integrates two public data sources:
+
+* **UCI Online Retail Excel dataset** for transaction-level sales, product, customer, and return analysis.
+* **World Bank Country REST API** for country, region, and income-level reference data.
+
+The country reference data is loaded through Dataflow Gen2 into `dbo.DimCountryReference`. A Fabric notebook creates `gold.DimCountry`, which connects to `gold.FactSales` through `CountryKey`.
+
+This enables sales analysis by World Bank region and income level.
+
+## Evidence
+
+| Evidence                                     | Screenshot                                                     |
+| -------------------------------------------- | -------------------------------------------------------------- |
+| Lakehouse Bronze, Silver, and Gold layers    | `screenshots/01_lakehouse_medallion_layers.png`                |
+| PySpark quality checks                       | `screenshots/02_notebook_data_quality_checks.png`              |
+| Notebook pipeline run                        | `screenshots/03_pipeline_notebook_run_succeeded.png`           |
+| API Dataflow output table                    | `screenshots/04_dataflow_api_country_reference_table.png`      |
+| Combined orchestration run                   | `screenshots/05_combined_pipeline_parallel_run.png`            |
+| Country-to-sales semantic model relationship | `screenshots/06_semantic_model_country_sales_relationship.png` |
+
+
 
 ## Important Data Limitations
 
