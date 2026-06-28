@@ -33,7 +33,13 @@ Gold Tables
 * `Refresh_Country_Reference_API`
 * `Run_Retail_ETL_Notebook`
 
-These activities currently run independently in parallel.
+The activities run sequentially:
+
+1. `Refresh_Country_Reference_API` refreshes the World Bank API reference table.
+2. After that activity succeeds, `Run_Retail_ETL_Notebook` creates `gold.DimCountry`, rebuilds `gold.FactSales`, and refreshes the reporting-ready Gold layer.
+
+This dependency prevents the notebook from using stale or missing country reference data.
+
 
 ## Data Quality Rules
 
