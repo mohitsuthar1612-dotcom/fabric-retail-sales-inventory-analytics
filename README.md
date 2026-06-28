@@ -20,6 +20,8 @@ UCI Online Retail dataset: UK online retail transactions from December 2010 to D
 * Direct Lake Power BI semantic model
 * DAX measures for sales, quantity sold, average order value, inventory value, and low-stock product count
 * Initial Power BI dashboard with KPI cards
+* Fabric Data Pipeline that runs the PySpark ETL notebook manually and records run status
+* Dataflow Gen2 ingestion from the World Bank public REST API into a Lakehouse country-reference table
 
 ## Architecture
 
@@ -60,12 +62,12 @@ screenshots/  Fabric, model, and report evidence
 
 ## Skills Demonstrated
 
-Microsoft Fabric, OneLake, Lakehouse, Medallion Architecture, PySpark, Delta Tables, Data Quality Checks, Star Schema Modelling, Direct Lake, Power BI, DAX.
+Microsoft Fabric, OneLake, Lakehouse, Medallion Architecture, PySpark, Delta Tables, Data Quality Checks, Star Schema Modelling, Direct Lake, Power BI, DAX, Fabric Data Pipelines, Notebook Activity, Dataflow Gen2, REST API Ingestion, Power Query.
+
 
 ## Next Improvements
+* Connect country reference data to sales reporting through a country mapping rule
+* Add a Copy Job or database source
+* Add pipeline parameters, error handling, and refresh monitoring
+* Document data lineage and business rules
 
-* Add Data Pipeline or Copy Job ingestion
-* Add Dataflow Gen2 transformation example
-* Add a second source such as CSV or REST API
-* Add pipeline monitoring and refresh documentation
-* Add more report pages and business questions
